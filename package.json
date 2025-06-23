@@ -1,0 +1,13 @@
+{
+  "name": "bytemail",
+  "version": "1.0.0",
+  "main": "script/server.js",
+  "scripts": {
+    "start": "node script/server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7"
+  }
+}

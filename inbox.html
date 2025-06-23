@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bytemail</title>
+  <link rel="stylesheet" href="style/style.css" />
+</head>
+<body>
+  <h1>📨 Bytemail Webmail</h1>
+  <div class="container">
+    <nav class="sidebar">
+      <ul>
+        <li data-folder="inbox" class="active">📥 Inbox</li>
+        <li data-folder="archived">📂 Archived</li>
+        <li data-folder="sent">📤 Sent</li>
+        <li data-folder="promotional">💼 Promotional</li>
+        <li data-folder="subscriptions">🔔 Subscriptions</li>
+      </ul>
+    </nav>
+
+    <main class="main-content">
+      <section id="emails-section">
+        <h2 id="folder-title">Inbox</h2>
+        <div id="emails"></div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Delete confirmation modal -->
+  <section id="deleteConfirm" class="hidden">
+    <h2>Delete Email</h2>
+    <p>Are you sure? This will be the last time you see this mail.</p>
+    <div class="btn-group">
+      <button id="deleteProceedBtn" class="danger-btn">Proceed</button>
+      <button id="deleteCancelBtn" class="close-btn">Cancel</button>
+    </div>
+  </section>
+
+  <!-- Floating Compose Button -->
+  <button id="openComposeBtn" title="Compose new mail" aria-label="Compose new mail">✏️</button>
+
+  <script src="script/main.js"></script>
+  <script>
+    document.getElementById('openComposeBtn').addEventListener('click', () => {
+      window.location.href = 'compose.html';
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+[
+  {
+    "uid": "UID-000001",
+    "email": "test$bytemail.com",
+    "password": "test123"
+  },
+  {
+    "uid": "UID-000002",
+    "email": "user2$bytemail.com",
+    "password": "securepass"
+  }
+]

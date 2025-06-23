@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sign Up — Bytemail</title>
+  <link rel="stylesheet" href="style/sign-up.css" />
+</head>
+<body>
+  <div class="auth-container">
+    <h1>📝 Create Your Bytemail</h1>
+
+    <form id="signupForm">
+      <input type="text" id="newAddress" placeholder="Choose Bytemail Address (e.g., xyz$bytemail.com)" required />
+      <input type="email" id="newEmail" placeholder="Your Real Email Address" required />
+      <input type="password" id="newPassword" placeholder="Password" required />
+      <button type="submit">Sign Up</button>
+    </form>
+
+    <p class="auth-switch">Already have an account? <a href="index.html">Login here</a></p>
+  </div>
+
+  <script>
+    document.getElementById("signupForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const address = document.getElementById("newAddress").value.trim();
+      const email = document.getElementById("newEmail").value.trim();
+      const password = document.getElementById("newPassword").value;
+
+      if (address && email && password) {
+        localStorage.setItem("bytemail_user", JSON.stringify({ address, email }));
+        window.location.href = "inbox.html";
+      } else {
+        alert("Please complete all fields.");
+      }
+    });
+  </script>
+</body>
+</html>
